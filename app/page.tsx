@@ -68,10 +68,14 @@ export default function LandingPage() {
                         </h1>
                     </Link>
 
+
                     <div className="flex items-center gap-8">
                         <a href="#mission" className="text-sm text-zinc-400 hover:text-cyan-500 transition-colors">Mission</a>
                         <a href="#technology" className="text-sm text-zinc-400 hover:text-cyan-500 transition-colors">Technology</a>
                         <a href="#features" className="text-sm text-zinc-400 hover:text-cyan-500 transition-colors">Features</a>
+                        <Link href="/heatmap" className="text-sm text-zinc-400 hover:text-cyan-500 transition-colors">
+                            Safety Map
+                        </Link>
 
                         <Link href="/dashboard">
                             <button className="relative px-6 py-2 bg-gradient-to-r from-cyan-600 to-cyan-500 rounded-lg font-bold text-sm overflow-hidden group">

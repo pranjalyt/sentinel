@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Activity, Map, BarChart3, Cpu, Shield, Home } from 'lucide-react';
+import { Activity, Map, BarChart3, Cpu, Shield, Home, TrendingUp } from 'lucide-react';
 import { ReactNode } from 'react';
 
 interface DashboardLayoutProps {
@@ -16,6 +16,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
         { href: '/', label: 'Home', icon: Home },
         { href: '/dashboard', label: 'Dashboard', icon: Activity },
         { href: '/map', label: 'Map View', icon: Map },
+        { href: '/heatmap', label: 'Safety Heatmap', icon: TrendingUp },
         { href: '/analytics', label: 'Analytics', icon: BarChart3 },
         { href: '/system-health', label: 'System Health', icon: Cpu },
     ];
