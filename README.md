@@ -104,6 +104,41 @@ npm run build
 npm start
 ```
 
+## 🚀 Deploy to Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com).
+
+### One-Click Deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/pranjalyt/sentinel)
+
+### Manual Deployment
+
+1. **Push your code to GitHub** (already done!)
+   ```bash
+   git push origin main
+   ```
+
+2. **Import to Vercel**:
+   - Go to [vercel.com](https://vercel.com)
+   - Click "Add New Project"
+   - Import your GitHub repository: `pranjalyt/sentinel`
+   - Vercel will auto-detect Next.js settings
+   - Click "Deploy"
+
+3. **Configuration** (Optional):
+   - Framework Preset: **Next.js** (auto-detected)
+   - Build Command: `npm run build` (auto-detected)
+   - Output Directory: `.next` (auto-detected)
+   - Install Command: `npm install` (auto-detected)
+
+4. **Environment Variables** (if needed):
+   - Add any required environment variables in Vercel dashboard
+   - Example: `NEXT_PUBLIC_API_URL`, etc.
+
+Your app will be live at: `https://your-project-name.vercel.app`
+
+
 ## 📁 Project Structure
 
 ```
