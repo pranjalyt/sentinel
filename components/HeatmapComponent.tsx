@@ -87,26 +87,20 @@ export default function HeatmapComponent() {
 
                 const markerHtml = `
                     <div style="
-                        width: 32px;
-                        height: 32px;
+                        width: 24px;
+                        height: 24px;
                         background-color: ${statusColor};
                         border: 3px solid white;
-                        border-radius: 4px;
+                        border-radius: 50%;
                         box-shadow: 0 0 15px ${statusColor}80;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-size: 18px;
-                    ">
-                        🚔
-                    </div>
+                    "></div>
                 `;
 
                 const policeIcon = L.divIcon({
                     html: markerHtml,
                     className: 'police-marker',
-                    iconSize: [32, 32],
-                    iconAnchor: [16, 16],
+                    iconSize: [24, 24],
+                    iconAnchor: [12, 12],
                 });
 
                 const marker = L.marker(unit.position, { icon: policeIcon }).addTo(mapInstance);
@@ -157,7 +151,7 @@ export default function HeatmapComponent() {
             `}</style>
 
             <div className="relative w-full h-full">
-                <div ref={mapContainerRef} className="w-full h-full" />
+                <div ref={mapContainerRef} className="w-full h-full z-0" />
 
                 {/* Zone Details Popover */}
                 {selectedZone && (
@@ -281,8 +275,8 @@ export default function HeatmapComponent() {
                             <div className="flex items-center justify-between p-3 bg-zinc-950 rounded-lg border border-white/10">
                                 <span className="text-sm text-zinc-400">Status</span>
                                 <span className={`text-sm font-bold uppercase px-2 py-1 rounded ${selectedUnit.status === 'active' ? 'bg-blue-500/20 text-blue-400' :
-                                        selectedUnit.status === 'responding' ? 'bg-amber-500/20 text-amber-400' :
-                                            'bg-zinc-700/20 text-zinc-400'
+                                    selectedUnit.status === 'responding' ? 'bg-amber-500/20 text-amber-400' :
+                                        'bg-zinc-700/20 text-zinc-400'
                                     }`}>
                                     {selectedUnit.status}
                                 </span>

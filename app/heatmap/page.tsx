@@ -66,7 +66,7 @@ export default function HeatmapPage() {
                 <HeatmapComponent />
 
                 {/* Legend */}
-                <div className="absolute bottom-6 left-6 bg-zinc-900/95 backdrop-blur-xl border border-white/10 rounded-lg p-4 shadow-2xl">
+                <div className="absolute bottom-6 left-6 bg-zinc-900/95 backdrop-blur-xl border border-white/10 rounded-lg p-4 shadow-2xl z-10 pointer-events-auto">
                     <h3 className="text-sm font-bold mb-3 text-zinc-100">Safety Index Legend</h3>
                     <div className="space-y-2">
                         <div className="flex items-center gap-3">
@@ -99,7 +99,7 @@ export default function HeatmapPage() {
                         </div>
                         <div className="border-t border-white/10 pt-2 mt-2">
                             <div className="flex items-center gap-3">
-                                <div className="text-xl">🚔</div>
+                                <div className="w-4 h-4 bg-blue-500 rounded-full border-2 border-white shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
                                 <div>
                                     <div className="text-xs font-medium text-zinc-100">Police Units</div>
                                     <div className="text-[10px] text-zinc-500">Active deployment</div>
@@ -110,7 +110,7 @@ export default function HeatmapPage() {
                 </div>
 
                 {/* Stats Card */}
-                <div className="absolute top-6 left-6 bg-zinc-900/95 backdrop-blur-xl border border-white/10 rounded-lg p-4 shadow-2xl">
+                <div className="absolute top-6 left-6 bg-zinc-900/95 backdrop-blur-xl border border-white/10 rounded-lg p-4 shadow-2xl z-10 pointer-events-auto">
                     <h3 className="text-sm font-bold mb-3 text-zinc-100">Live Statistics</h3>
                     <div className="space-y-2">
                         <div className="flex items-center justify-between gap-6">
